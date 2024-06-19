@@ -18,6 +18,13 @@ app.use((req, res, next) => {
     next();
 });
 
+const corsOptions = {
+    origin: 'https://dgtl-frontend.vercel.app/', // Replace with your frontend domain
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  };
+
+  app.use(cors(corsOptions));
 const port = process.env.PORT || 5000;
 
 //import mongourl from .env file
