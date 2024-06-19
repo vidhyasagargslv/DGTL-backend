@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 });
 
 const corsOptions = {
-    origin: 'https://dgtl-frontend.vercel.app/', // Replace with your frontend domain
+    origin: 'https://dgtl-frontend.vercel.app/', // allow only the specified domain
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: ['Content-Type', 'Authorization'],
   };
